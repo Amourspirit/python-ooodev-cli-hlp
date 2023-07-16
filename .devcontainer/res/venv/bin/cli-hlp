@@ -1,0 +1,6 @@
+#!/workspace/sphinx-cli-help/.venv/bin/python
+import sys
+from sphinx_cli_help.cli.hlp import main
+
+if __name__ == '__main__':
+    sys.exit(main())

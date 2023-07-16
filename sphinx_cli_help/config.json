@@ -1,0 +1,41 @@
+{
+    "url_prefix": [
+        {
+            "index": 0,
+            "url": "https://python-ooo-dev-tools.readthedocs.io/en/latest/",
+            "name": "OooDev"
+        }
+    ],
+    "resource_dir": "res",
+    "open_in_browser": true,
+    "print_url": true,
+    "max_results_default": 10,
+    "db_version": "1.0.0",
+    "db_name": "db.sqlite3",
+    "db_not_name": [
+        "ooodev.format.inner.%"
+    ],
+    "db_not_domain": [
+        "std"
+    ],
+    "db_not_role": [
+        "doc",
+        "label"
+    ],
+    "roles": [
+        "class",
+        "method",
+        "attribute",
+        "property",
+        "namedtuple",
+        "namedtuple-field",
+        "function",
+        "module",
+        "exception",
+        "data",
+        "protocol"
+    ],
+    "domains": [
+        "py"
+    ]
+}

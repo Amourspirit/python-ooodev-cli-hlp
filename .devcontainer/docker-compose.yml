@@ -1,0 +1,30 @@
+version: "3.9"
+
+services:
+  sphinx_cli_help:
+    # env_file: .env
+    build: 
+      context: ../
+      dockerfile: .devcontainer/Dockerfile
+      args:
+        PYTHON_VERSION: "3.10"
+    environment:
+      - DEV_CONTAINER=1
+    network_mode: "bridge"
+    volumes:
+      - type: bind
+        source: ../
+        target: /workspace/sphinx-cli-help
+      - type: volume
+        source: virtual_venv
+        target: /workspace/sphinx-cli-help/.venv
+
+    # user root is for file sharing. root user is the current user on the host
+    # and the bind volume for ooouno-dev-tools will not work unless root.
+    user: root
+    # Overrides default command so things don't shut down after the process ends.
+    command: /bin/sh -c "while sleep 1000; do :; done"
+    container_name: sphinx_cli_help_container
+
+volumes:
+  virtual_venv:
