@@ -9,17 +9,17 @@
 # Don't forget to include a LICENSE file in the project root directory.
 
 [custom.metadata]
-pkg_out_name = "sphinx_cli_help"
-entry_point_name = "cli-hlp"
+pkg_out_name = "ooo_dev_cli_hlp"
+entry_point_name = "odh"
 build_dir = "build"
 build_readme="sphinx_cli_help/README.md"
-build_license=""
+build_license="LICENSE"
 
 [tool.poetry]
-name = "custom-sphinx-help"
+name = "ooo-dev-cli-hlp"
 version = "0.1.0"
-description = "Command Line Help for my Custom Sphinx Project"
-authors = ["Author Name <author@email.com>"]
+description = "Command Line Help for my OooDev Project"
+authors = [":Barry-Thomas-Paul: Moss <vibrationoflife@protonmail.com>"]
 license = "MIT"
 readme = "README.md"
 # Do not change this next line. Instead change the custom.metadata.pkg_out_name
