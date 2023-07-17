@@ -17,7 +17,7 @@ build_license="LICENSE"
 
 [tool.poetry]
 name = "ooo-dev-cli-hlp"
-version = "0.1.0"
+version = "0.1.1"
 description = "Command Line Help for my OooDev Project"
 authors = [":Barry-Thomas-Paul: Moss <vibrationoflife@protonmail.com>"]
 license = "MIT"
