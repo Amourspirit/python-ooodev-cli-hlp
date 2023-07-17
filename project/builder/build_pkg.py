@@ -14,6 +14,7 @@ def main() -> int:
     cfg_build_dir = str(cfg["custom"]["metadata"]["build_dir"])
     cfg_build_readme = str(cfg["custom"]["metadata"]["build_readme"])
     cfg_build_license = str(cfg["custom"]["metadata"]["build_license"])
+    cfg_entry_name = str(cfg["custom"]["metadata"]["entry_point_name"])
     # endregion Read config values from pyproject.toml
 
     # region Set up build and dist directories
@@ -56,6 +57,7 @@ def main() -> int:
     # endregion License
 
     _process_interactive_toml(build_path=build_path)
+    _process_interactive_hlp(build_dev_help_path, cfg_entry_name, cfg_pkg_name)
 
     # region Run Poetry Build on build directory
     env = os.environ.copy()
@@ -83,6 +85,17 @@ def _process_interactive_toml(build_path: Path) -> None:
     cfg["tool"]["poetry"]["packages"][0] = {"include": f"{cfg_pkg_name}"}
     with open(build_path / "pyproject.toml", "w") as f:
         toml.dump(cfg, f)
+
+
+def _process_interactive_hlp(build_dev_help_path: Path, cfg_entry_name: str, cfg_pkg_name: str) -> None:
+    i_help = build_dev_help_path / "cli" / "interactive_hlp.py"
+    with open(i_help, "r") as f:
+        content = f.read()
+        content = content.replace("cli-hlp", cfg_entry_name)
+        content = content.replace("sphinx_cli_help", cfg_pkg_name)
+
+    with open(i_help, "w") as f:
+        f.write(content)
 
 
 if __name__ == "__main__":
