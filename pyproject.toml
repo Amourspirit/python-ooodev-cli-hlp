@@ -17,7 +17,7 @@ build_license="LICENSE"
 
 [tool.poetry]
 name = "ooo-dev-cli-hlp"
-version = "0.1.0"
+version = "0.0.2"
 description = "Command Line Help for my OooDev Project"
 authors = [":Barry-Thomas-Paul: Moss <vibrationoflife@protonmail.com>"]
 license = "MIT"
@@ -46,3 +46,14 @@ extended-select=["ANN", "C4", "N", "SIM", "TCH"]
 ignore=["E502"]
 show-fixes=true
 target="py38"
+
+
+[[tool.poetry.source]]
+name = "pypi-test"
+url = "https://test.pypi.org/legacy/"
+priority = "supplemental"
+
+
+[[tool.poetry.source]]
+name = "PyPI"
+priority = "primary"

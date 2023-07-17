@@ -14,15 +14,15 @@
     "autoDocstring.docstringFormat": "google",
     "workbench.colorCustomizations": {
         "[Monokai]": {
-            "titleBar.activeBackground": "#533a03",
+            "titleBar.activeBackground": "#4d013c",
             "titleBar.activeForeground": "#e49df4"
         },
         "[Default Dark+]": {
-            "titleBar.activeBackground": "#533a03",
+            "titleBar.activeBackground": "#4d013c",
             "titleBar.activeForeground": "#e49df4"
         },
         "[Visual Studio Dark]": {
-            "titleBar.activeBackground": "#533a03",
+            "titleBar.activeBackground": "#4d013c",
             "titleBar.activeForeground": "#e49df4"
         }
     },
