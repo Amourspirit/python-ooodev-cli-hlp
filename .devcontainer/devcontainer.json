@@ -1,7 +1,7 @@
 {
-    "name": "Sphinx-CLI-Help",
+    "name": "OooDev-CLI-Help",
     "dockerComposeFile": "docker-compose.yml",
-    "service": "sphinx_cli_help",
+    "service": "ooodev_cli_help",
     "workspaceFolder": "/workspace/sphinx-cli-help",
     // "build": {
     //     // "dockerfile": "Dockerfile"

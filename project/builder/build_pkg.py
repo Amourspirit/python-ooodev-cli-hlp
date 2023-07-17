@@ -80,11 +80,6 @@ def main() -> int:
     build_license = build_path / "LICENSE"
     if build_license.exists():
         os.remove(build_license)
-
-    if readme_path:
-        build_readme = build_path / readme_path.name
-        if build_readme.exists():
-            os.remove(build_readme)
     # endregion Clean up build directory
 
     return 0
