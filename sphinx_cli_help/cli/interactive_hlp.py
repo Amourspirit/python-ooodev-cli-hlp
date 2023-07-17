@@ -29,6 +29,6 @@ def interactive_hlp(s="", cmd="hlp"):
         ex_path = Path(sys.executable)
         venv = str(ex_path.parent.parent)
     if platform.system() == "Windows":
-        os.system(f"{sys.executable} {venv}\\Scripts\\cli-hlp.exe {cmd} {s}")
+        os.system(f"cli-hlp.exe {cmd} {s}")
     else:
-        os.system(f"{sys.executable} {venv}/bin/cli-hlp {cmd} {s}")
+        os.system(f"cli-hlp {cmd} {s}")

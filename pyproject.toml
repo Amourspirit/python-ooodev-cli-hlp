@@ -16,12 +16,27 @@ build_readme="sphinx_cli_help/README.md"
 build_license="LICENSE"
 
 [tool.poetry]
-name = "ooo-dev-cli-hlp"
-version = "0.1.0"
+name = "ooo-dev-odh"
+version = "0.1.3"
 description = "Command Line Help for my OooDev Project"
 authors = [":Barry-Thomas-Paul: Moss <vibrationoflife@protonmail.com>"]
 license = "MIT"
 readme = "README.md"
+keywords = ["odev", "libreoffice", "openoffice", "cli", "ooouno"]
+homepage = "https://github.com/Amourspirit/python-ooodev-cli-hlp"
+documentation = "https://github.com/Amourspirit/python-ooodev-cli-hlp#readme"
+repository = "https://github.com/Amourspirit/python-ooodev-cli-hlp"
+classifiers = [
+    "Topic :: Office/Business",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
 # Do not change this next line. Instead change the custom.metadata.pkg_out_name
 packages = [{include = "sphinx_cli_help"}]
 
