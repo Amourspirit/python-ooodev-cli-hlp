@@ -10,6 +10,14 @@ This project has be created from the [Sphinx CLI Help](https://github.com/Amours
 
 The Information below is from the template project.
 
+## Install
+
+Install from [PyPI](https://pypi.org/project/ooo-dev-odh/)
+
+```bash
+pip install ooo-dev-odh
+```
+
 ---
 
 
