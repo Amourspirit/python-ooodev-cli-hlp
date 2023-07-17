@@ -1,8 +1,7 @@
 version: "3.9"
 
 services:
-  sphinx_cli_help:
-    # env_file: .env
+  ooodev_cli_help:
     build: 
       context: ../
       dockerfile: .devcontainer/Dockerfile
@@ -24,7 +23,7 @@ services:
     user: root
     # Overrides default command so things don't shut down after the process ends.
     command: /bin/sh -c "while sleep 1000; do :; done"
-    container_name: sphinx_cli_help_container
+    container_name: ooodev_cli_help_container
 
 volumes:
   virtual_venv:

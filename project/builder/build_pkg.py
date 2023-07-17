@@ -25,7 +25,7 @@ def main() -> int:
         shutil.rmtree(build_path, ignore_errors=True)
     build_path.mkdir(parents=True, exist_ok=True)
 
-    dist_path = root_path / "dist"
+    dist_path = build_path / "dist"
     if dist_path.exists():
         shutil.rmtree(dist_path, ignore_errors=True)
     # endregion Set up build and dist directories
@@ -38,6 +38,7 @@ def main() -> int:
 
     # region Readme
     # Copy README.md to build directory
+    readme_path = None
     if cfg_build_readme:
         readme_path = Path(cfg_build_readme)
         if not readme_path.is_absolute():
@@ -72,10 +73,14 @@ def main() -> int:
     # region Run Poetry Build on build directory
     env = os.environ.copy()
     subprocess.run(["poetry", "build", "--no-interaction", "-C", str(build_path)], env=env)
-    shutil.copytree(build_path / "dist", dist_path)
-    # clear build directory
-    shutil.rmtree(build_path, ignore_errors=True)
     # endregion Run Poetry Build on build directory
+
+    # region Clean up build directory
+    shutil.rmtree(build_dev_help_path, ignore_errors=True)
+    build_license = build_path / "LICENSE"
+    if build_license.exists():
+        os.remove(build_license)
+    # endregion Clean up build directory
 
     return 0
 

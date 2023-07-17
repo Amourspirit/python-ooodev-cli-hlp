@@ -1,4 +1,25 @@
-# Sphinx CLI Help
+# OooDev CLI Help
+
+[OOO Development Tools](https://python-ooo-dev-tools.readthedocs.io/en/latest/index.html) (OooDev) is a framework for working with the LibeOffice API in Python.
+
+This package provides a command line interface (CLI) for OooDev.
+
+See [CLI Help Readme](./sphinx_cli_help/README.md)
+
+This project has be created from the [Sphinx CLI Help](https://github.com/Amourspirit/python-sphinx-cli-help) template.
+
+The Information below is from the template project.
+
+## Install
+
+Install from [PyPI](https://pypi.org/project/ooo-dev-odh/)
+
+```bash
+pip install ooo-dev-odh
+```
+
+---
+
 
 ## Introduction
 
