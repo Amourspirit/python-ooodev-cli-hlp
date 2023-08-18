@@ -1,14 +1,14 @@
 # Do not use Poetry to build this project directly.
 # Instead use python -m app build
-# The custom.metadata section is used to set the package name and entry point name.
-# python -m app build will use the custom.metadata.pkg_out_name to set the package name
-# and the custom.metadata.entry_point_name to set the entry point name.
+# The tool.template.metadata section is used to set the package name and entry point name.
+# python -m app build will use the tool.template.metadata.pkg_out_name to set the package name
+# and the tool.template.metadata.entry_point_name to set the entry point name.
 # The tool.poetry section otherwise should be modified as needed.
 #
 # After running python -m app build, the normal poetry publish command can be used to publish.
 # Don't forget to include a LICENSE file in the project root directory.
 
-[custom.metadata]
+[tool.template.metadata]
 pkg_out_name = "ooo_dev_cli_hlp"
 entry_point_name = "odh"
 build_dir = "build"
@@ -22,7 +22,7 @@ description = "Command Line Help for my OooDev Project"
 authors = [":Barry-Thomas-Paul: Moss <vibrationoflife@protonmail.com>"]
 license = "MIT"
 readme = "README.md"
-keywords = ["odev", "libreoffice", "openoffice", "cli", "ooouno"]
+keywords = ["ooodev", "libreoffice", "openoffice", "cli", "ooouno"]
 homepage = "https://github.com/Amourspirit/python-ooodev-cli-hlp"
 documentation = "https://github.com/Amourspirit/python-ooodev-cli-hlp#readme"
 repository = "https://github.com/Amourspirit/python-ooodev-cli-hlp"
@@ -37,11 +37,11 @@ classifiers = [
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
 ]
-# Do not change this next line. Instead change the custom.metadata.pkg_out_name
+# Do not change this next line. Instead change the tool.template.metadata.pkg_out_name
 packages = [{include = "sphinx_cli_help"}]
 
 [tool.poetry.scripts]
-#  Don not change this next line. Instead change the custom.metadata.entry_point_name
+# Do not change this next line. Instead change the tool.template.metadata.entry_point_name
 cli-hlp = "sphinx_cli_help.cli.hlp:main"
 
 [tool.poetry.dependencies]
