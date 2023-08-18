@@ -2,6 +2,7 @@ import shutil
 import os
 import subprocess
 from pathlib import Path
+from typing import Dict
 import toml
 
 
@@ -10,11 +11,12 @@ def main() -> int:
 
     # region Read config values from pyproject.toml
     cfg = toml.load(root_path / "pyproject.toml")
-    cfg_pkg_name = str(cfg["custom"]["metadata"]["pkg_out_name"])
-    cfg_build_dir = str(cfg["custom"]["metadata"]["build_dir"])
-    cfg_build_readme = str(cfg["custom"]["metadata"]["build_readme"])
-    cfg_build_license = str(cfg["custom"]["metadata"]["build_license"])
-    cfg_entry_name = str(cfg["custom"]["metadata"]["entry_point_name"])
+    cfg_meta: Dict[str, str] = cfg["tool"]["template"]["metadata"]
+    cfg_pkg_name = cfg_meta["pkg_out_name"]
+    cfg_build_dir = cfg_meta["build_dir"]
+    cfg_build_readme = cfg_meta["build_readme"]
+    cfg_build_license = cfg_meta["build_license"]
+    cfg_entry_name = cfg_meta["entry_point_name"]
     # endregion Read config values from pyproject.toml
 
     # region Set up build and dist directories
@@ -76,8 +78,9 @@ def main() -> int:
 
 def _process_interactive_toml(build_path: Path) -> None:
     cfg = toml.load(build_path / "pyproject.toml")
-    cfg_pkg_name = str(cfg["custom"]["metadata"]["pkg_out_name"])
-    cfg_entry_name = str(cfg["custom"]["metadata"]["entry_point_name"])
+    cfg_meta: Dict[str, str] = cfg["tool"]["template"]["metadata"]
+    cfg_pkg_name = cfg_meta["pkg_out_name"]
+    cfg_entry_name = cfg_meta["entry_point_name"]
 
     cli_hlp = str(cfg["tool"]["poetry"]["scripts"]["cli-hlp"])
     cfg["tool"]["poetry"]["scripts"][f"{cfg_entry_name}"] = cli_hlp.replace("sphinx_cli_help", cfg_pkg_name)

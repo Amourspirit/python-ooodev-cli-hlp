@@ -6,9 +6,6 @@ This package provides a command line interface (CLI) for OooDev.
 
 See [CLI Help Readme](./sphinx_cli_help/README.md)
 
-This project has be created from the [Sphinx CLI Help](https://github.com/Amourspirit/python-sphinx-cli-help) template.
-
-The Information below is from the template project.
 
 ## Install
 
@@ -20,6 +17,12 @@ pip install ooo-dev-odh
 
 ---
 
+This project has be created from the [Sphinx CLI Help](https://github.com/Amourspirit/python-sphinx-cli-help) template.
+
+The Information below is from the template project.
+
+<details>
+<summary>Original Template Readme</summary>
 
 ## Introduction
 
@@ -44,7 +47,7 @@ Edit the `pyproject.toml` file and change the following:
 See the [Configure](https://github.com/Amourspirit/python-sphinx-cli-help/wiki/config.json) in the Wiki for more information
 
 ```toml
-[custom.metadata]
+[tool.template.metadata]
 pkg_out_name = "my_custom_help"
 entry_point_name = "my-help"
 build_dir = "build"
@@ -166,3 +169,4 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ```
+</details>
