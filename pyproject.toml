@@ -17,7 +17,7 @@ build_license="LICENSE"
 
 [tool.poetry]
 name = "ooo-dev-odh"
-version = "0.1.4"
+version = "0.1.5"
 description = "Command Line Help for my OooDev Project"
 authors = [":Barry-Thomas-Paul: Moss <vibrationoflife@protonmail.com>"]
 license = "MIT"
